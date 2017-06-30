@@ -5,6 +5,9 @@ function Mostar()
     var edad
     nombre=document.getElementById("elNombre").value;
 	edad=document.getElementById("laEdad").value;
-    alert("Usted se llama "+nombre+" y tiene "+edad+" años");
+    
+    var texto="Usted se llama "+nombre+" y tiene "+edad+" años";
+    alert(texto);
+    /* se crea variable "texto" para su 
+    reutilizacion parano escribir la oracion cada vez que lo necesite*/
 }
-
