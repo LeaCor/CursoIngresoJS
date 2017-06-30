@@ -8,5 +8,6 @@ function Mostar()
 	mensaje=prompt("Dame tu nombre");
 	document.getElementById("elNombre").value=mensaje;
 	
+	
 }
 

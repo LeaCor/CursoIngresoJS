@@ -16,5 +16,6 @@ c=a+b;
 resultado=parseInt(a)+parseInt(b)
 */
 alert("El resultado es "+c);
+
 }
 

@@ -10,4 +10,5 @@ function Mostar()
     alert(texto);
     /* se crea variable "texto" para su 
     reutilizacion parano escribir la oracion cada vez que lo necesite*/
+    
 }
