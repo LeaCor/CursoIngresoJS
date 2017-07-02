@@ -13,7 +13,7 @@ edad=parseInt(edad);
 var soltero=(estadoCivil=="Soltero");
 var noSoltero=(estadoCivil!="Soltero");
 
-//EN EL 'IF' PUEDO USAR ESTAS NUEVAS VARIABLES O LA VARIABLE 'ESTADOCIVIL'Y SUS COMPARACIONES
+//EN EL 'IF' PUEDO USAR ESTAS NUEVAS VARIABLES O LA VARIABLE 'ESTADOCIVIL'Y SUS COMPARACIONES.
 
     if(edad<18&&noSoltero)
     {
