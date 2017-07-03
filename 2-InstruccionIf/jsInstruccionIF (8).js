@@ -27,3 +27,19 @@ var noSoltero=(estadoCivil!="Soltero");
         }
     }
 }//FIN DE LA FUNCIÓN
+/* if (edad>=18&&estadoCivil=="soltero")
+{
+
+}
+tambien 
+
+if(!(edad<18&&noSoltero))
+{
+
+}
+else
+{
+
+}
+
+*/
