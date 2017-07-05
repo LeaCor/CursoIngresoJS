@@ -13,7 +13,7 @@ var numUsuario;
 
 function comenzar()
 {
-  numeroSecreto=Math.floor(Math.random()*(100-1)+1);//(MAX-MIN]+MIN   MAX NO ESTA INCLUIDO PERO SI EL MINIMO.
+  numeroSecreto=Math.floor(Math.random()*(100-1))+1;//(MAX-MIN]+MIN   MAX NO ESTA INCLUIDO PERO SI EL MINIMO.
 	//Genero el número RANDOM entre 1 y 100
 	console.log(numeroSecreto);
 		//alert(numeroSecreto );
