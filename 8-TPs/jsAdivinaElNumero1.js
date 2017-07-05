@@ -8,14 +8,14 @@ secreto del 1 al 100, en la pantalla del juego
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
 var numeroSecreto; 
-var contadorIntentos=0;//porque es el valor a comenzar 
+var contadorIntentos=0;//porque es el valor a que tomara para el primer alert si acierta. 
 var numUsuario;
 
 function comenzar()
 {
-  numeroSecreto=Math.floor(Math.random()*(100-1))+1;//(MAX-MIN]+MIN   MAX NO ESTA INCLUIDO PERO SI EL MINIMO.
-	//Genero el número RANDOM entre 1 y 100
-	console.log(numeroSecreto);
+  numeroSecreto=Math.floor((Math.random()*100)+1);
+	//1ero multiplica por 109 el numero generado por random.Luego le suma uno. Por ultimo redondea
+	console.log(numeroSecreto);//Aca lo muestra. Para el juego no mostrarlo haciendolo comentario
 		//alert(numeroSecreto );
 	
 
@@ -23,8 +23,10 @@ function comenzar()
 
 function verificar()
 {
-  contadorIntentos++;//suma 1 por cada intento
-  //puede ser tambien ++contadorIntentos; contadorImntentos+=1;
+  contadorIntentos++;//suma 1 por cada intento.
+  //Debe escribirse antes de ingresar por primera vez IF asi suma 1 al contador
+  //puede ser tambien ++contadorIntentos; contadorImntentos+=1
+  
   numUsuario=document.getElementById("numero").value;
 
   if(numeroSecreto==numUsuario)
@@ -42,5 +44,8 @@ function verificar()
         alert("te pasaste")
       }
  }
-	
+ /*contadorIntentos++;  se ubicaa aca
+ si antes de ingresar a la funcion 
+ la variable contadorIntentos=1;
+ */
 }
