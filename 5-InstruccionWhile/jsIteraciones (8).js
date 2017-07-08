@@ -6,6 +6,26 @@ function Mostrar()
 	var negativo=1;
 	
 	var respuesta='si';
+	
+	while(respuesta!="no")// tambien "contador==0"
+	{
+		numero=parseInt(prompt("Ingrese numero:"));
+
+		if(numero>=0)
+		{
+			positivo=numero+positivo
+			
+		}
+		else
+		{
+			negativo=numero*negativo
+			
+		}
+
+		respuesta=prompt("Seguimos?Contestar si o no");
+		//si respuesta es NO se termina de ejecutar el bucle
+		
+	}
 
 
 document.getElementById('suma').value=positivo;
