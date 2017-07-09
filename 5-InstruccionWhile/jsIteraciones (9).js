@@ -4,21 +4,23 @@ function Mostrar()
 	var contador=0;
 	var maximo;
 	var minimo;
-	var key=true;
-	// declarar variables
-	
+	//var key=true;
 	var respuesta='si';
+	
+	// declarar variables
 
-	while(respuesta!='no')
+	while(respuesta!='no') 
 	{	numero=prompt("Ingresar un numero:")
 		numero=parseInt(numero);
 
-		if(key)//TRUE por unica y primera vez
+		if(contador==0)//TRUE por unica y primera vez
+			//puede ser tambien if (key)
 		{
 			maximo=numero;
 			minimo=numero;
 			//O TAMBIEN max=min=numero; maximo y minimo (por primera vez) valen lo mismo.
-			key=false;//cambiado para no volver a entrar a este IF.
+			
+			//key=false;//cambiado para no volver a entrar a este IF.
 
 		}
 		//lUEGO SE COMPARA. Por primera vez no hay cambios ya que no se da ninguna de las siguientes IF (condiciones).
@@ -32,6 +34,7 @@ function Mostrar()
 			maximo=numero;
 		}
 
+		contador++
 
 		respuesta=prompt("Mas numeros?Contestar si o no");
 	}

@@ -23,7 +23,7 @@ function Mostrar()
 		}
 		*/
 		
-		
+		//MIRAR!!! QUE OSCAR LO HIZO CON respuesta="CONFIRM"
 		
 
 	}
