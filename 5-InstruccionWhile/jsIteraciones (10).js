@@ -1,10 +1,10 @@
 function Mostrar()
 {
-	var positivo=0;
-	var negativo=0;
-	var par;//no lo voy a usar
-	var ceros=0;
-	var contador=1;
+	var positivo=0;//acumulador
+	var negativo=0;//acumulador
+	var par=0;//no lo voy a usar
+	var ceros=0;//no lo voy a usar
+	var contador=1;//no lo voy a usar
 	//declarar contadores y variables 
 	var contadorPositivo=0;
 	var contadorNegativo=0;
@@ -16,10 +16,12 @@ function Mostrar()
 	var diferPosNeg
 	
 	var respuesta="si";//variable para ingresar por primera vez al WHILE.
+	//var respuesta=true; CON BOOLEANO
 	
 	while(respuesta=="si")
 	//AL RESPONDER POR PROMPT con esta condicion, al ingresar cualquier cosa como respuesta no Ingresaria al WHILE y terminaria.
 	//si fuera (respuesta!=no) puede ingresar cualquier cosa e ingresaria al WHILE.
+	//while(respuesta) CON BOOLEANO
 	
 	{
 		numero=parseInt(prompt("Ingrese numero"));
@@ -55,7 +57,7 @@ function Mostrar()
 		
 		diferPosNeg=positivo-negativo;
 
-		respuesta=prompt("Otro numero? Contestar si o no");	
+		respuesta=prompt("Otro numero? Contestar si o no");// hacer con CONFIRM si el while debe ser TRUE	
 	}
 
 document.write("La suma de positivos= "+positivo+
