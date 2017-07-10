@@ -43,10 +43,10 @@ function Mostrar()
 			//contadorDeCeros=contador+contadorDeCeros;
 			
 		}
-		/*if(numero%2==0)
+		if(numero%2==0)
 		{
-			contadorDePares=(contador++)+contadorDePares;
-		}*/
+			contadorDePares++
+		}
 		
 		promedioPositivo=positivo/contadorPositivo;//hay que definirlo antes de entrar al while...
 		//porque lo voy a usar fuera del While(alert, document.wrhite,ETC)
