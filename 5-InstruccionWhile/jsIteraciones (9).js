@@ -13,8 +13,8 @@ function Mostrar()
 	{	numero=prompt("Ingresar un numero:")
 		numero=parseInt(numero);
 
-		if(contador==0)//TRUE por unica y primera vez
-			//puede ser tambien if (key)
+		if(contador==0)//TRUE por unica y primera vez ESTO SE LLAMA BANDERA
+			//puede ser tambien if (key) variable booleana 
 		{
 			maximo=numero;
 			minimo=numero;
