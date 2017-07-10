@@ -3,7 +3,7 @@ function Mostrar()
 
 	var contador=0;
 	var positivo=0;
-	var negativo=1;
+	var negativo=1;//para que en la multiplicacion no sea CERO
 	var contadorPositivo=0;
 	var contadorNegativo=0;
 	var respuesta='si';
@@ -12,9 +12,9 @@ function Mostrar()
 	{
 		numero=parseInt(prompt("Ingrese numero:"));
 
-		if(numero>=0)
+		if(numero>=0)//se incluye el cero porque se suma y evitamos que entre en negativo que multiplica y seria un error.
 		{
-			positivo=numero+positivo
+			positivo=numero+positivo//seria como el acumulador de otros casos
 			contadorPositivo++
 			//contadorPositivo=contador++ 
 		}
@@ -27,7 +27,7 @@ function Mostrar()
 
 		respuesta=prompt("Seguimos?Contestar si o no");
 		//si respuesta es NO se termina de ejecutar el bucle
-		
+		//tambien se puede hacer con "confirm" (tambien hay que cambiar la variable "respuesta" con TRUE)
 	}
 
 

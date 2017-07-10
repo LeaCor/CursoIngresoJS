@@ -3,9 +3,9 @@ function Mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
+	var respuesta=true;
 
-	while(respuesta!="no")//No tiene limite. Tambien puede ser "contador==0"
+	while(respuesta==true)//No tiene limite. Tambien puede ser "contador==0"
 	{
 		numero=parseInt(prompt("Ingresa numero:"));
 		//fijarse que en el ejercicio anterior  definí la variable "numero" por fuera del WHILE.
@@ -13,7 +13,7 @@ function Mostrar()
 		
 		contador++//puede ponerse como no ya que cambia la condicion
 		
-		respuesta=prompt("Seguimos?Contestar si o no")
+		respuesta=confirm("Seguimos?Contestar Acepte o Cancele")
 		
 		/*si fuera WHILE(respuesta==si)
 		entonces al final de este bucle debo crear
@@ -23,7 +23,7 @@ function Mostrar()
 		}
 		*/
 		
-		//MIRAR!!! QUE OSCAR LO HIZO CON respuesta="CONFIRM"
+		//MIRAR!!! QUE OSCAR LO HIZO CON isNaN (tiene problemas)
 		
 
 	}
