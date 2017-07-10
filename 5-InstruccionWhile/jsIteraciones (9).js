@@ -36,7 +36,7 @@ function Mostrar()
 
 		contador++
 
-		respuesta=prompt("Mas numeros?Contestar si o no");
+		respuesta=prompt("Mas numeros?Contestar si o no");//Se puede hacer con CONFIRM
 	}
 
 	document.getElementById("maximo").value="El numero maximo es: "+maximo;
