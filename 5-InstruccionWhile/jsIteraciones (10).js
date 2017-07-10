@@ -15,18 +15,25 @@ function Mostrar()
 
 	var diferPosNeg
 	
-	var respuesta="si";//variable para ingresar por primera vez al WHILE.
-	//var respuesta=true; CON BOOLEANO
+	var respuesta=true;//variable para ingresar por primera vez al WHILE.
+	//var respuesta="si; 
 	
-	while(respuesta=="si")
+	while(respuesta==true)
 	//AL RESPONDER POR PROMPT con esta condicion, al ingresar cualquier cosa como respuesta no Ingresaria al WHILE y terminaria.
 	//si fuera (respuesta!=no) puede ingresar cualquier cosa e ingresaria al WHILE.
-	//while(respuesta) CON BOOLEANO
+	//while(respuesta==si) 
 	
 	{
 		numero=parseInt(prompt("Ingrese numero"));
 		//WHILE(!(numero<=0 || numero>=0)) si no es un numero ingresa y pregunta de nuevo
 		//numero=parseInt(prompt("Solo numeros"))
+		
+		while(isNaN(numero))//si numero es NaN este while es TRUE y te pide nuevamente un numero
+		{
+			numero=parseInt(prompt("TE DIJE NUMERO!!!"));
+
+		}
+		
 		if(numero<0)
 		{
 			negativo=numero+negativo//tambien negativo+=numero(sumaria cada nuevo numero ingresado
@@ -57,18 +64,18 @@ function Mostrar()
 		
 		diferPosNeg=positivo-negativo;
 
-		respuesta=prompt("Otro numero? Contestar si o no");// hacer con CONFIRM si el while debe ser TRUE	
+		respuesta=confirm("Otro numero? Contestar si o no");// hacer con prompt si queres	
 	}
 
 document.write("La suma de positivos= "+positivo+
-			   "La suma de negativos= "+negativo+
-			   "La cantidad de positivos= "+contadorPositivo+
-			   "La cantidad de negativos= "+contadorNegativo+
-			   "La cantidad de ceros= "+contadorDeCeros+
-			   "La cantidad de numeros pares= "+contadorDePares+
-			   "El promedio de positivos= "+promedioPositivo+
-			   "El promedio de negativos= "+promedioNegativo+
-			   "Dieferencia entre positivos y negativos= "+diferPosNeg);
+			   "</br>La suma de negativos= "+negativo+
+			   "</br>La cantidad de positivos= "+contadorPositivo+
+			   "</br>La cantidad de negativos= "+contadorNegativo+
+			   "</br>La cantidad de ceros= "+contadorDeCeros+
+			   "</br>La cantidad de numeros pares= "+contadorDePares+
+			   "</br>El promedio de positivos= "+promedioPositivo+
+			   "</br>El promedio de negativos= "+promedioNegativo+
+	     	   "</br>Diferencia entre positivos y negativos= "+diferPosNeg);
 
 // me evitaria definir las variables promedio...y difer..
 // haciendo la cuenta dentro del alert o document.write
