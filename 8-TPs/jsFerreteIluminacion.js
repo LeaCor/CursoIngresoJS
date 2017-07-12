@@ -13,7 +13,8 @@ function CalcularPrecio ()
  	var cantidad;
     var marca;
     var precioFinal=35;
-
+    var iibb=0.10;
+    
     cantidad=document.getElementById("Cantidad").value;
     cantidad=parseInt(cantidad);
 
@@ -24,29 +25,29 @@ function CalcularPrecio ()
 
     if(cantidad>=6)
     {
-        precioFinal=precioFinal*0.50
-
+        precioFinal=(precioFinal*0.50)*cantidad;
+        
     }
     else if(cantidad==5)
     {
         if(marca=="ArgentinaLuz")
         {
-            precioFinal=precioFinal*0.60;
+            precioFinal=(precioFinal*0.60)*cantidad;
         }
         else
         {
-            precioFinal=precioFinal*0.70;
+            precioFinal=(precioFinal*0.70)*cantidad;
         }
     }
     else if(cantidad==4)
     {
         if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
         {
-            precioFinal=precioFinal*0.75;
+            precioFinal=(precioFinal*0.75)*cantidad;
         }
         else
         {
-            precioFinal=precioFinal*0.80;
+            precioFinal=(precioFinal*0.80)*cantidad;
         }
 
     }
@@ -54,19 +55,31 @@ function CalcularPrecio ()
     {
         if(marca=="ArgentinaLuz")
         {
-            precioFinal=precioFinal*0.85;
+            precioFinal=(precioFinal*0.85)*cantidad;
         }
         else if(marca=="FelipeLamparas")
         {
-            precioFinal=precioFinal*0.90;
+            precioFinal=(precioFinal*0.90)*cantidad;
         }
         else
         {
-            precioFinal=precioFinal*0.95;
+            precioFinal=(precioFinal*0.95)*cantidad;
         }
     }
-        else if(cantidad==3)
-        {
-            precioFinal=precioFinal;
-        }
+    else if(cantidad<3)
+    {
+        precioFinal=precioFinal*cantidad;
+    }
+
+    if(precioFinal>=120)
+    {
+        iibb=precioFinal*iibb;
+        precioFinal=iibb+precioFinal
+        
+        alert("Usted esta pagando $"+iibb+" de Ingresos Brutos");
+    }
+
+
+    document.getElementById("precioDescuento").value=precioFinal;
+
 }
