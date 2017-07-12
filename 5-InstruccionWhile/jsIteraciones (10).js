@@ -62,20 +62,26 @@ function Mostrar()
 		
 		promedioNegativo=negativo/contadorNegativo;
 		
-		diferPosNeg=positivo-negativo;
+		//diferPosNeg=positivo-negativo; //esto es la diferencia de los acumladores
+
+		diferPosNeg=contadorNegativo-contadorPositivo
+		if(diferPosNeg<0)
+		{
+			diferPosNeg=diferPosNeg*-1;
+		}
 
 		respuesta=confirm("Otro numero? Contestar si o no");// hacer con prompt si queres	
 	}
 
 document.write("La suma de positivos= "+positivo+
-			   "</br>La suma de negativos= "+negativo+
-			   "</br>La cantidad de positivos= "+contadorPositivo+
-			   "</br>La cantidad de negativos= "+contadorNegativo+
-			   "</br>La cantidad de ceros= "+contadorDeCeros+
-			   "</br>La cantidad de numeros pares= "+contadorDePares+
-			   "</br>El promedio de positivos= "+promedioPositivo+
-			   "</br>El promedio de negativos= "+promedioNegativo+
-	     	   "</br>Diferencia entre positivos y negativos= "+diferPosNeg);
+			   "<br>La suma de negativos= "+negativo+
+			   "<br>La cantidad de positivos= "+contadorPositivo+
+			   "<br>La cantidad de negativos= "+contadorNegativo+
+			   "<br>La cantidad de ceros= "+contadorDeCeros+
+			   "<br>La cantidad de numeros pares= "+contadorDePares+
+			   "<br>El promedio de positivos= "+promedioPositivo+
+			   "<br>El promedio de negativos= "+promedioNegativo+
+	     	   "<br>Diferencia entre positivos y negativos= "+diferPosNeg);
 
 // me evitaria definir las variables promedio...y difer..
 // haciendo la cuenta dentro del alert o document.write
