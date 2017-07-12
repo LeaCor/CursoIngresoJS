@@ -57,14 +57,29 @@ function Mostrar()
 			contadorDePares++
 		}
 		
+		if(contadorNegativo>0)//condicional para que al no ingresar numeros negativos y por lo tanto no aparezca NaN como resultado; envie un mensaje 
+		{
+			promedioNegativo=negativo/contadorNegativo;
+		}
+		else
+		{
+			promedioNegativo="No hay numeros negativos ingresados";
+		}
+		
+		if(contadorPositivo>0)
+		{
 		promedioPositivo=positivo/contadorPositivo;//hay que definirlo antes de entrar al while...
 		//porque lo voy a usar fuera del While(alert, document.wrhite,ETC)
-		
-		promedioNegativo=negativo/contadorNegativo;
-		
-		//diferPosNeg=positivo-negativo; //esto es la diferencia de los acumladores
+		}
+		else
+		{
+			promedioPositivo="No hay numeros positivos ingresados";
+		}
 
+		
+		//diferPosNeg=positivo-negativo; //esto es la diferencia de los acumladores Y PIDE lo que hago abajo
 		diferPosNeg=contadorNegativo-contadorPositivo
+		
 		if(diferPosNeg<0)
 		{
 			diferPosNeg=diferPosNeg*-1;
